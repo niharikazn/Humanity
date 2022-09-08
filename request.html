@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Request</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+         select {
+      width: 100%;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #999;
+      padding: 6px 85px;
+      font-family: Poppins;
+      box-sizing: border-box; }
+      .main {
+    background: #f8f8f8;
+    padding: 0px 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="my-nav">
+          <div class="container">
+            <div class="row">
+              <div class="nav-items">
+                <div class="logo" style="color:orangered; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bolder; font-size:xx-large">
+                  HUMMANITY
+                </div>
+                <div class="menu-toggle">
+                  <div class="menu-hamburger"></div>
+                </div>
+                <div class="menu-items">
+                  <div class="menu">
+                    <ul>
+                      <li><a href="index.php">Home</a></li>
+                      <li><a href="about-us.html">About Us</a></li>
+                      <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">POST A REQUEST</h2>
+                        <form method="POST" class="register-form" id="register-form"action="request.php">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="phone" name="phone" id="phone" placeholder="Your phone"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="city" name="city" id="city" placeholder="City"/>
+                            </div>
+                            <div class="form-group">
+                              <label for="state">State</label>
+                              <select name="state" id="state" class="form-control" placeholder="choose" style="width: 100%;
+                              display: block;
+                              border: none;
+                              border-bottom: 1px solid #999;
+                              padding: 6px 85px;
+                              font-family: Poppins;
+                              box-sizing: border-box; ">
+                                   <option >choose</option>
+                                   <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                   <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                   <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                   <option value="Assam">Assam</option>
+                                   <option value="Bihar">Bihar</option>
+                                   <option value="Chandigarh">Chandigarh</option>
+                                   <option value="Chhattisgarh">Chhattisgarh</option>
+                                   <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                   <option value="Daman and Diu">Daman and Diu</option>
+                                   <option value="Delhi">Delhi</option>
+                                   <option value="Lakshadweep">Lakshadweep</option>
+                                   <option value="Puducherry">Puducherry</option>
+                                   <option value="Goa">Goa</option>
+                                   <option value="Gujarat">Gujarat</option>
+                                   <option value="Haryana">Haryana</option>
+                                   <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                   <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                   <option value="Jharkhand">Jharkhand</option>
+                                   <option value="Karnataka">Karnataka</option>
+                                   <option value="Kerala">Kerala</option>
+                                   <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                   <option value="Maharashtra">Maharashtra</option>
+                                   <option value="Manipur">Manipur</option>
+                                   <option value="Meghalaya">Meghalaya</option>
+                                   <option value="Mizoram">Mizoram</option>
+                                   <option value="Nagaland">Nagaland</option>
+                                   <option value="Odisha">Odisha</option>
+                                   <option value="Punjab">Punjab</option>
+                                   <option value="Rajasthan">Rajasthan</option>
+                                   <option value="Sikkim">Sikkim</option>
+                                   <option value="Tamil Nadu">Tamil Nadu</option>
+                                   <option value="Telangana">Telangana</option>
+                                   <option value="Tripura">Tripura</option>
+                                   <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                   <option value="Uttarakhand">Uttarakhand</option>
+                                   <option value="West Bengal">West Bengal</option>
+                                   </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="pincode">Pincode</label>
+                              <input type="pincode" name="pincode" id="pincode" placeholder="Pincode"/>
+                          </div>
+                            <div class="form-group">
+                                <label for="blood">Blood Group</label>
+                                <input type="blood" name="blood" id="blood" placeholder="Blood Group"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Post A Request"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <footer>
+        <div class="copy-right">
+          <div class="container">
+            <div class="copy-right-card">
+             <p>2015 @ All Rights Reserved Designed and developed by<a
+                 href="https://www.smarteyeapps.com">Niharika Jain</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+    
+    
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

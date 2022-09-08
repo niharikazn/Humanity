@@ -1,0 +1,542 @@
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
+/* ================================ Basic CSS =============================== */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'PT Sans',sans-serif; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px; }
+
+ul, ol {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin: 0px; }
+
+a:hover {
+  text-decoration: none; }
+
+.container {
+  max-width: 1170px; }
+  @media screen and (max-width: 575px) {
+    .container {
+      padding: 0px 15px;
+      max-width: 100%;
+      width: 100%; } }
+
+/* ================================ Header CSS =============================== */
+header .my-nav {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 15px 0px;
+  padding-left: 15px; }
+header .sub-01 {
+  position: relative;
+  background: #fd580b; }
+header .nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  align-items: center; }
+  header .nav-items .menu-toggle {
+    position: absolute;
+    top: 1.5625rem;
+    right: 0.9375rem;
+    transition: ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0; }
+    @media screen and (max-width: 767.98px) {
+      header .nav-items .menu-toggle {
+        visibility: visible;
+        opacity: 1; } }
+    header .nav-items .menu-toggle .menu-hamburger {
+      width: 1.875rem;
+      height: 0.125rem;
+      transition: ease-in-out 0.1s;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+      background: #fd580b;
+      position: relative; }
+      header .nav-items .menu-toggle .menu-hamburger.active {
+        background: rgba(0, 0, 0, 0);
+        box-shadow: none; }
+        header .nav-items .menu-toggle .menu-hamburger.active::after {
+          transform: rotate(45deg); }
+        header .nav-items .menu-toggle .menu-hamburger.active::before {
+          transform: rotate(135deg); }
+      header .nav-items .menu-toggle .menu-hamburger::before {
+        position: absolute;
+        content: "";
+        width: 1.875rem;
+        height: 0.125rem;
+        transition: ease-in-out 0.1s;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+        background: #fd580b;
+        transform: translatey(-0.625rem); }
+      header .nav-items .menu-toggle .menu-hamburger::after {
+        position: absolute;
+        content: "";
+        width: 1.875rem;
+        height: 0.125rem;
+        transition: ease-in-out 0.1s;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+        background: #fd580b;
+        transform: translatey(0.625rem); }
+  header .nav-items .logo {
+    width: 30%;
+    flex: 1 1 30%;
+    max-width: 30%; }
+    header .nav-items .logo img {
+      max-width: 230px; }
+    @media screen and (max-width: 767.98px) {
+      header .nav-items .logo {
+        width: 80%;
+        flex: 1 1 80%;
+        max-width: 80%; } }
+  header .nav-items .menu-items {
+    width: 70%;
+    flex: 1 1 70%;
+    max-width: 70%;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end; }
+    @media screen and (max-width: 767.98px) {
+      header .nav-items .menu-items {
+        width: 100%;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-top: 10px; } }
+    header .nav-items .menu-items .menu {
+      display: block;
+      width: 100%;
+      text-align: right; }
+      header .nav-items .menu-items .menu.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        transition: ease-in-out 0.9s; }
+      @media screen and (max-width: 767.98px) {
+        header .nav-items .menu-items .menu {
+          text-align: left;
+          opacity: 0;
+          visibility: hidden;
+          display: none; } }
+      header .nav-items .menu-items .menu ul li {
+        display: inline-block;
+        padding: 0.625rem; }
+        @media screen and (max-width: 767.98px) {
+          header .nav-items .menu-items .menu ul li {
+            display: block; } }
+        header .nav-items .menu-items .menu ul li a {
+          color: #222222;
+          padding: 0 1.25rem;
+          font-weight: 700; }
+          header .nav-items .menu-items .menu ul li a:hover {
+            color: #fd580b; }
+          @media screen and (max-width: 767.98px) {
+            header .nav-items .menu-items .menu ul li a {
+              padding: 0rem; } }
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            header .nav-items .menu-items .menu ul li a {
+              padding: 0 0.625rem; } }
+
+.og-hf {
+  position: fixed;
+  transition: ease-in-out 0.5s;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0; }
+  .og-hf .my-nav {
+    background: #fff; }
+
+/* ================================ Slider CSS =============================== */
+.banner {
+  position: relative;
+  height: 30.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0; }
+  .banner .wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 1.25rem 0;
+    padding: 6.25rem 0 2.5rem 0; }
+    .banner .wrapper h1 {
+      font-size: 1.875rem;
+      color: #fff;
+      display: block;
+      margin: .625rem 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .2px; }
+    .banner .wrapper p {
+      display: block;
+      font-size: 1.25rem;
+      margin: .625rem 0;
+      color: #fff; }
+    .banner .wrapper ol li {
+      display: inline-block;
+      background-color: #fd580b;
+      font-size: 1rem;
+      color: #fff;
+      padding: .625rem;
+      border-radius: .3125rem;
+      margin: .625rem 0; }
+      .banner .wrapper ol li:nth-child(2) {
+        margin-left: 1.25rem; }
+      .banner .wrapper ol li a {
+        color: #fff; }
+
+/* ================================ Section CSS =============================== */
+.bg-01 {
+  position: relative;
+  margin-top: -5rem;
+  width: 100%; }
+  .bg-01 .wrapper {
+    background: #fff;
+    position: relative;
+    padding: 2.5rem 6.875rem;
+    display: block;
+    width: 100%;
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.15);
+    z-index: 9; }
+    .bg-01 .wrapper .content {
+      display: block;
+      position: relative;
+      transition: all ease-in-out 0.5s;
+      margin: .625rem 0; }
+      .bg-01 .wrapper .content ol .dashed {
+        border-right: 1px dashed #ddd; }
+      .bg-01 .wrapper .content ol li {
+        display: inline-block;
+        position: relative;
+        padding: .625rem 0; }
+        .bg-01 .wrapper .content ol li i {
+          display: block;
+          font-size: 2.5rem;
+          color: #fd580b; }
+        .bg-01 .wrapper .content ol li h3 {
+          font-size: 1.25rem;
+          color: #222222;
+          text-align: center;
+          text-transform: capitalize;
+          font-weight: 600;
+          display: inline-block;
+          margin: .625rem 0; }
+        .bg-01 .wrapper .content ol li a {
+          display: block;
+          font-size: 1rem;
+          color: white;
+          padding: .625rem;
+          text-align: center;
+          font-weight:bolder ;
+          border-radius: .3125rem;
+          background-color: tomato;
+          line-height: 1.5rem;
+          margin: 0 0 .625rem 0; }
+        
+
+.bg-02 {
+  padding: 3.125rem 0;
+  position: relative;
+  overflow: hidden; }
+  .bg-02 .wrapper {
+    margin: 1.25rem 0;
+    position: relative;
+    display: block; }
+    .bg-02 .wrapper figure {
+      margin: 0; }
+    .bg-02 .wrapper .bs {
+      padding: 1.25rem;
+      border: 1px dashed #ddd;
+      position: relative;
+      display: inline-block; }
+      .bg-02 .wrapper .bs h3 {
+        font-size: 1.25rem;
+        color: #222222;
+        font-weight: 600; }
+      .bg-02 .wrapper .bs p {
+        font-size: .9375rem;
+        color: #373738;
+        line-height: 1.5rem;
+        display: inline-block;
+        margin: .625rem 0; }
+      .bg-02 .wrapper .bs ol li {
+        display: inline-block;
+        font-size: .8125rem; }
+        .bg-02 .wrapper .bs ol li i {
+          margin: 0 .625rem 0 0;
+          color: #fd580b; }
+.heading {
+  margin: 20px 0px;
+  text-align: left;
+  position: relative;
+  display: block; }
+  .heading h2 {
+    font-size: 25px;
+    color: #222222;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block; }
+
+/* ================================ Footer CSS =============================== */
+footer {
+  position: relative;
+  padding: 50px 0px 0px;
+  background: #212121; }
+  @media screen and (max-width: 767.98px) {
+    footer {
+      padding: 20px 0 0; } }
+  footer .copy-right {
+    padding: 20px 0px;
+    border-top: solid 1px #dfdfdf;
+    font-size: 14px;
+    color: #84878a;
+    text-align: center; }
+    footer .copy-right p a {
+      color: #fd580b;
+      padding-left: 10px;
+      font-weight: bold; }
+  footer .footer-content {
+    margin: 20px 0px;
+    display: block;
+    width: 100%;
+    color: #84878a; }
+    footer .footer-content p {
+      font-size: 16px;
+      padding: 10px 0px;
+      line-height: 27px;
+      margin: 0px; }
+    footer .footer-content ul li {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background: #fd580b;
+      color: #fff;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 5px 3px 0px 0px; }
+    footer .footer-content ol li {
+      padding: 10px 0px;
+      position: relative; }
+      footer .footer-content ol li a {
+        color: #84878a;
+        font-size: 16px; }
+        footer .footer-content ol li a i {
+          padding-right: 10px;
+          color: #fd580b; }
+    footer .footer-content h2 {
+      font-size: 20px;
+      position: relative;
+      padding: 5px 0px;
+      font-weight: 600;
+      color: #fff; }
+    footer .footer-content .form-group {
+      position: relative; }
+      footer .footer-content .form-group .form-control {
+        height: 40px;
+        padding-right: 40px;
+        text-overflow: ellipsis; }
+      footer .footer-content .form-group i {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        color: #fff;
+        background: #fd580b;
+        text-align: center;
+        top: 0;
+        right: 0; }
+
+.bg-0-b {
+  padding: 50px 0px;
+  position: relative;
+  background: #e8f0f5;
+  z-index: 2; }
+  .bg-0-b .main-card-contact {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 9; }
+    .bg-0-b .main-card-contact .sup-card-contact {
+      width: 40%;
+      max-width: 40%;
+      flex: 1 1 40%; }
+      @media screen and (max-width: 767.98px) {
+        .bg-0-b .main-card-contact .sup-card-contact {
+          width: 100%;
+          max-width: 100%;
+          flex: 1 1 100%; } }
+      .bg-0-b .main-card-contact .sup-card-contact .contact-title {
+        position: relative; }
+        .bg-0-b .main-card-contact .sup-card-contact .contact-title h2 {
+          font-size: 20px;
+          margin: 0 0 10px 0;
+          color: #222;
+          padding-bottom: 5px;
+          position: relative;
+          display: inline-block; }
+          .bg-0-b .main-card-contact .sup-card-contact .contact-title h2::before {
+            position: absolute;
+            content: "";
+            background: #fd580b;
+            width: 100%;
+            height: 3px;
+            bottom: 0; }
+        .bg-0-b .main-card-contact .sup-card-contact .contact-title ol li {
+          display: block;
+          padding: 10px 0px;
+          color: #606060;
+          font-size: 16px;
+          font-weight: 600; }
+          .bg-0-b .main-card-contact .sup-card-contact .contact-title ol li i {
+            color: #fd580b;
+            padding-right: 15px; }
+      .bg-0-b .main-card-contact .sup-card-contact .head-content {
+        position: relative;
+        display: block; }
+        .bg-0-b .main-card-contact .sup-card-contact .head-content h2 {
+          font-size: 20px;
+          margin: 0 0 10px 0;
+          color: #222;
+          padding-bottom: 5px;
+          position: relative;
+          display: inline-block; }
+          .bg-0-b .main-card-contact .sup-card-contact .head-content h2::before {
+            position: absolute;
+            content: "";
+            background: #fd580b;
+            width: 100%;
+            height: 3px;
+            bottom: 0; }
+        .bg-0-b .main-card-contact .sup-card-contact .head-content p {
+          font-size: 16px;
+          line-height: 27px;
+          display: block;
+          padding: 20px 0px;
+          margin: 0px; }
+    .bg-0-b .main-card-contact .sup-card-contact-0a {
+      width: 60%;
+      max-width: 60%;
+      flex: 1 1 60%; }
+      @media screen and (max-width: 767.98px) {
+        .bg-0-b .main-card-contact .sup-card-contact-0a {
+          width: 100%;
+          max-width: 100%;
+          flex: 1 1 100%; } }
+      .bg-0-b .main-card-contact .sup-card-contact-0a .dived {
+        width: 100%;
+        flex-wrap: wrap; }
+        .bg-0-b .main-card-contact .sup-card-contact-0a .dived .ca-ool {
+          padding: 0px 10px; }
+        .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group {
+          width: 50%;
+          max-width: 50%;
+          flex: 1 1 50%; }
+          .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup {
+            margin: 10px;
+            position: relative; }
+            .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup .cal-01 {
+              position: relative; }
+            .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup i {
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              height: 45px;
+              width: 45px;
+              background: #fd580b;
+              text-align: center;
+              line-height: 45px;
+              color: #fff;
+              border-top-right-radius: .25rem;
+              border-bottom-right-radius: .25rem; }
+            .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup label {
+              font-size: 15px;
+              color: #6e6e6e; }
+              .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup label span {
+                position: relative;
+                top: 4px;
+                left: 5px;
+                color: #fd580b; }
+          .bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-control {
+            padding: 10px 15px;
+            margin: 30px 0px;
+            height: 45px;
+            position: relative; }
+
+.abt-01 {
+  padding: 3.125rem 0;
+  background: #fd580b;
+  position: relative;
+  overflow: hidden;
+  z-index: 9; }
+  .abt-01::before {
+    position: absolute;
+    content: "";
+    background: #fff;
+    height: 9.375rem;
+    width: 9.375rem;
+    top: 0%;
+    left: 48%;
+    z-index: 1;
+    opacity: 0.1;
+    transform: translate3d(-23%, 17%, 0) rotate(-54deg); }
+  .abt-01 .heading-wrapper {
+    position: relative;
+    margin: 1.25rem 0;
+    display: block;
+    text-align: center;
+    z-index: 8; }
+    .abt-01 .heading-wrapper h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.625rem;
+      text-transform: uppercase; }
+    .abt-01 .heading-wrapper ol li {
+      display: inline-block;
+      font-size: 1rem;
+      color: #ddd; }
+      .abt-01 .heading-wrapper ol li:nth-child(2) {
+        color: #fff; }
+      .abt-01 .heading-wrapper ol li i {
+        margin: 0 0.625rem;
+        color: #ddd; }
+
+/*# sourceMappingURL=style.css.map */
